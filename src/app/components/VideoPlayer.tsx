@@ -261,7 +261,7 @@ export function VideoPlayer({ streamKey, streamUrl, onRemove, onTogglePin, isPin
           {/* Mute Button */}
           <button
             onClick={handleMuteToggle}
-            className="p-1.5 hover:bg-slate-100 rounded-md transition-all"
+            className="p-1.5 hover:bg-slate-100 rounded-md transition-all cursor-pointere"
             title={isMuted ? 'Unmute' : 'Mute'}
           >
             {isMuted ? <VolumeOff size={15} className="text-slate-500" /> : <Volume2 size={15} className="text-blue-600" />}
@@ -270,7 +270,7 @@ export function VideoPlayer({ streamKey, streamUrl, onRemove, onTogglePin, isPin
           {/* Expand Button */}
           <button
             onClick={handleExpand}
-            className="p-1.5 hover:bg-slate-100 rounded-md transition-all"
+            className="p-1.5 hover:bg-slate-100 rounded-md transition-all cursor-pointer"
             title="Fullscreen"
           >
             <Expand size={15} className="text-slate-500" />
@@ -279,7 +279,7 @@ export function VideoPlayer({ streamKey, streamUrl, onRemove, onTogglePin, isPin
           {/* Record Button */}
           <button
             onClick={() => setIsRecording(!isRecording)}
-            className="p-1.5 hover:bg-slate-100 rounded-md transition-all"
+            className="p-1.5 hover:bg-slate-100 rounded-md transition-all cursor-pointer"
             title={isRecording ? 'Stop Recording' : 'Start Recording'}
           >
             <Circle size={15} className={isRecording ? 'fill-red-600 text-red-600 animate-pulse' : 'text-slate-500'} />
@@ -288,7 +288,7 @@ export function VideoPlayer({ streamKey, streamUrl, onRemove, onTogglePin, isPin
           {/* Refresh Button */}
           <button
             onClick={handleRefresh}
-            className="p-1.5 hover:bg-slate-100 rounded-md transition-all"
+            className="p-1.5 hover:bg-slate-100 rounded-md transition-all cursor-pointer"
             title="Refresh Stream"
           >
             <RotateCw size={15} className="text-slate-500" />

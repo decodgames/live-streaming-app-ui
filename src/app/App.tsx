@@ -11,7 +11,7 @@ interface Stream {
 
 export default function App() {
   const [keyInput, setKeyInput] = useState('');
-  const [host, setHost] = useState('13.232.150.48');
+  const [host, setHost] = useState('apidecodgames.site');
   const [port, setPort] = useState('80');
   const [app, setApp] = useState('hls');
   const [streams, setStreams] = useState<Stream[]>([]);
@@ -19,9 +19,11 @@ export default function App() {
   const [copied, setCopied] = useState(false);
 
   const buildStreamUrl = (key: string) => {
-    const protocol = 'http';
+    const protocol = 'https';
     const portStr = port ? `:${port}` : '';
-    return `${protocol}://${host}${portStr}/${app}/${key}.m3u8`;
+    console.log('Building stream URL with:', `${protocol}://${host}/${app}/${key}.m3u8`);
+    // return `${protocol}://${host}${portStr}/${app}/${key}.m3u8`;
+    return `${protocol}://${host}/${app}/${key}.m3u8`;
   };
 
   const handleAddKey = () => {
